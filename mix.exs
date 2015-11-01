@@ -4,6 +4,9 @@ defmodule ExPerceptron.Mixfile do
   def project do
     [app: :ex_perceptron,
      version: "0.0.1",
+     name: 'ExPerceptron',
+     source_url: "https://github.com/jpmec/ex_perceptron",
+     homepage_url: "https://github.com/jpmec/ex_perceptron",
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -27,6 +30,8 @@ defmodule ExPerceptron.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:earmark, "~> 0.1", only: :dev},
+     {:ex_doc, "~> 0.10", only: :dev}
+    ]
   end
 end
